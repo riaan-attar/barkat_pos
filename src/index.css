@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #92400e;
+  --color-brand-dark: #78350f;
+  --color-cash: #15803d;
+  --color-online: #1d4ed8;
+  --color-udhaar: #7e22ce;
+  --color-discount: #9a3412;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", sans-serif;
+}
+
+html, body, #root { height: 100%; }
+body {
+  background: #fffbeb;
+  color: #1c1917;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+input, textarea { -webkit-user-select: text; user-select: text; font-size: 16px; } /* 16px stops iOS zooming on focus */
+button { touch-action: manipulation; cursor: pointer; }
+button:disabled { cursor: not-allowed; }
+:focus-visible { outline: 3px solid var(--color-online); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
